@@ -4,7 +4,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.6+-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-v1.0.3-orange.svg)](https://github.com/your-username/FFXIV_Logs_GUI_Editor/releases)
+[![Version](https://img.shields.io/badge/Version-v1.0.3-orange.svg)](https://github.com/eroubue/FFXIV_Logs_GUI_Editor/releases)
 
 ## 功能特性
 
@@ -27,7 +27,7 @@
 1. 确保已安装Python 3.6或更高版本
 2. 克隆仓库：
    ```bash
-   git clone https://github.com/your-username/FFXIV_Logs_GUI_Editor.git
+   git clone https://github.com/eroubue/FFXIV_Logs_GUI_Editor.git
    cd FFXIV_Logs_GUI_Editor
    ```
 3. 运行程序：
@@ -36,7 +36,7 @@
    ```
 
 ### 方法2: 下载可执行文件
-从 [Releases](https://github.com/your-username/FFXIV_Logs_GUI_Editor/releases) 页面下载最新版本的可执行文件。
+从 [Releases](https://github.com/eroubue/FFXIV_Logs_GUI_Editor/releases) 页面下载最新版本的可执行文件。
 
 ## 使用说明
 
