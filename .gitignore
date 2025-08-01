@@ -28,6 +28,8 @@ MANIFEST
 # 混淆临时文件
 main_obfuscated.py
 
+
+
 # 主要源代码文件（可选，根据项目需要）
 main.py
 checksum_calculator.py

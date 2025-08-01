@@ -94,6 +94,19 @@ def validate_checksum_with_line_number(line: str, line_number: int) -> bool:
     
     return actual_checksum == expected_checksum
 
+def validate_checksum_with_line_numbers(line: str, line_number: int) -> bool:
+    """
+    验证FFXIV日志行的校验码（包含行号）- 别名函数
+    
+    Args:
+        line: 完整的日志行
+        line_number: 行号
+    
+    Returns:
+        校验码是否有效
+    """
+    return validate_checksum_with_line_number(line, line_number)
+
 def parse_log_file_with_line_numbers(file_path: str) -> List[Tuple[str, int]]:
     """
     解析日志文件，返回每行内容及其正确的行号

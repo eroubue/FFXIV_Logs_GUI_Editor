@@ -88,29 +88,11 @@
 - **GUI框架**: tkinter
 - **编码**: UTF-8
 - **支持平台**: Windows, macOS, Linux
-- **作者**: [Nag0mi](https://space.bilibili.com/your-bilibili-id)
+- **作者**: Nag0mi
 - **反馈**: 
-  - Bilibili: @平安罗德岛
-  - 爱发电: https://afdian.com/a/Nag0mi/plan
+  - Bilibili: [平安罗德岛](https://space.bilibili.com/74131583)
+  - 爱发电: [Nag0mi]https://afdian.com/a/Nag0mi/plan
 
-## 构建和发布
-
-### 版本更新
-```bash
-# 更新版本号
-python update_version.py v1.0.4
-
-# 带版本更新的简化混淆打包
-python build_with_version.py v1.0.4
-```
-
-### 构建可执行文件
-```bash
-# 简化混淆打包
-python build_simple_obfuscated.py
-```
-
-详细说明请参考 [版本更新说明.md](版本更新说明.md)
 
 ## 贡献
 

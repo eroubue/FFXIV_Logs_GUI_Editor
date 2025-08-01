@@ -1,1 +1,5 @@
-pyinstaller==6.3.0 
+pyinstaller==6.3.0
+# 反混淆工具依赖
+uncompyle6>=3.9.0
+# 自动更新模块依赖
+requests>=2.25.0 
