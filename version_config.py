@@ -6,14 +6,14 @@
 """
 
 # 版本信息
-VERSION = "v1.0.3"
+VERSION = "v1.0.5"
 AUTHOR = "Nag0mi"
 
 # 版本描述
-VERSION_DESCRIPTION = "支持更高伤害值的编码算法"
+VERSION_DESCRIPTION = "支持时间偏移"
 
 # 构建信息
-BUILD_DATE = "2025-08-01"
+BUILD_DATE = "2025-08-02"
 BUILD_TYPE = "release"  # release, debug, beta
 
 def get_version_info():
@@ -28,7 +28,7 @@ def get_version_info():
 
 def get_author_info():
     """获取作者信息字符串"""
-    return f"作者:{AUTHOR} 版本:{VERSION}\n严禁倒卖，完全免费，仅供学习交流使用！"
+    return f"作者:{AUTHOR} 版本:{VERSION}\n严禁倒卖，完全免费，仅供学习交流使用！\nbilibili@平安罗德岛"
 
 if __name__ == "__main__":
     # 测试版本信息

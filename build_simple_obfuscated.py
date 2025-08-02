@@ -124,18 +124,35 @@ def obfuscate_code():
     print("代码混淆完成！")
     return True
 
+def get_version_from_config():
+    """从version_config.py获取版本号"""
+    try:
+        import version_config
+        return version_config.VERSION
+    except ImportError:
+        return "v1.0.4"  # 默认版本号
+
 def build_obfuscated_exe():
     """构建混淆的exe文件"""
     print("开始构建混淆exe文件...")
+    
+    # 获取版本号
+    version = get_version_from_config()
+    exe_name = f"FFXIV_Logs_GUI_Editor{version}"
     
     # PyInstaller命令参数（增强混淆）
     cmd = [
         "pyinstaller",
         "--onefile",                    # 打包成单个exe文件
         "--windowed",                   # 不显示控制台窗口
-        "--name=FFXIV日志编辑器_混淆版",  # 设置exe文件名
+        f"--name={exe_name}",           # 动态设置exe文件名
         "--icon=icon.ico",              # 图标文件（如果存在）
         "--add-data=checksum_calculator.py;.",  # 包含校验码计算模块
+        "--hidden-import=requests",     # 明确包含requests模块
+        "--hidden-import=urllib3",      # requests的依赖
+        "--hidden-import=charset_normalizer",  # requests的依赖
+        "--hidden-import=idna",         # requests的依赖
+        "--hidden-import=certifi",      # requests的依赖
         
         "main_obfuscated.py"           # 混淆后的主程序文件
     ]
@@ -177,8 +194,10 @@ def cleanup_obfuscation():
             print(f"已删除目录: {dir_name}")
     
     # 删除spec文件
+    version = get_version_from_config()
+    exe_name = f"FFXIV_Logs_GUI_Editor{version}"
     spec_files = [
-        "FFXIV日志编辑器_混淆版.spec",
+        f"{exe_name}.spec",
         "FFXIV日志编辑器.spec"
     ]
     
@@ -213,13 +232,16 @@ def main():
         return
     
     # 检查输出文件
-    exe_path = os.path.join("dist", "FFXIV日志编辑器_混淆版.exe")
+    version = get_version_from_config()
+    exe_name = f"FFXIV_Logs_GUI_Editor{version}.exe"
+    exe_path = os.path.join("dist", exe_name)
     
     if os.path.exists(exe_path):
         print(f"\n✅ 混淆打包成功！")
         print(f"exe文件位置: {os.path.abspath(exe_path)}")
         print(f"文件大小: {os.path.getsize(exe_path) / 1024 / 1024:.2f} MB")
         print(f"混淆级别: 基础混淆")
+        print(f"版本: {version}")
         
         # 询问是否清理临时文件
         response = input("\n是否清理临时文件？(y/n): ").lower().strip()
